@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS Reference;
+CREATE TABLE Reference (
+ StatusId INTEGER NOT NULL UNIQUE,
+ RName TEXT NOT NULL,
+ RDescription TEXT
+);
+
+INSERT INTO Reference VALUES
+    (0,'Inactive','This instance should not be used'),
+    (1,'Active','This instance is good for use'),
+    (2,'Complete','This instance is complete'),
+    (3,'Incomplete','This instance is incomplete'),
+    (4,'InProgress','This instance is incomplete and still in progress'),
+    (9,'NeedCorrection','This instance should be corrected before use'),
+    (10,'Duplicate','This is a duplicate of another instance'),
+    (11,'Archive','This is an archive'),
+    (100,'0DOF','Timelapse that don''t move'),
+    (101,'1DOF','Timelapse that move in one direction'),
+    (102,'2DOF','Timelapse that move in one direction'),
+    (110,'ArchiveFonctional','Timelapse still fonctunional but not used anymore'),
+    (111,'Archive','Timelapse not used anymore'),
+    (112,'NeedCorrection','Timelapse that cannot be used before changes'),
+    (113,'NeedVerification','Timelapse that should be tested and verified'),
+    (114,'Buggy','Some bugs were spotted during the use of this timelapse'),
+    (115,'Corrected','Timelapse that have been corrected once'),
+    (116,'Duplicate','Duplicate of another timelapse'),
+    (200,'Completed','This visual sample has been shot, processed, saved and published'),
+    (201,'InProgress','The visual sample is in shooting progress'),
+    (202,'Paused','The shooting progress must wait before completion'),
+    (211,'ShootStopped','The visual sample has been stopped during the shooting process'),
+    (212,'ProcessStopped','The visual sample has been stopped during the encoding process'),
+    (213,'PostStopped','The visual sample has been stopped during the post process'),
+    (220,'Deleted','The visual sample has been deleted from internet and drive'),
+    (230,'FinishEarly','The visual sample will stop shooting at the next image and finish the full process'),
+    (300,'Current','Current resident of the greenhouse'),
+    (301,'NoPlant','Current resident not germinated'),
+    (302,'FirstPlant','Current with germination'),
+    (310,'Old','Ancient resident, now out'),
+    (311,'Dead','The resident did not survive the greenhouse experiment'),
+    (312,'Alive','Ancient resident, now out giving fruit or flowers'),
+    (400,'FullData','This data sample is complete'),
+    (401,'Hardware','The data sample is done only from the hardware sensors'),
+    (410,'Corrupted','The data is corrupted'),
+    (999,'ToDelete','This saving should be deleted');
+
