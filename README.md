@@ -1,5 +1,6 @@
 # EdenBot
 Code for managing my cyber greenhouse (timelapses, tweepy and sensor database)
+It runs on a rasperry Py 3
 
 ### "Bifrost" - The rainbow that connects the worlds
 This file parses the config and settings files
